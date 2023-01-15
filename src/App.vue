@@ -18,12 +18,15 @@
     created(){
         this.createCard();
     },
+    mounted(){
+      store.loaded = true;
+    },
     methods: {
         createCard(){
             axios.get(store.api).then((reponse) => {
                     store.cards = reponse.data ;
             })
-            store.loaded = true;
+            
         }
     }
   }
