@@ -12,6 +12,7 @@
         return{
             store,
             cardsList: [],
+            
         }
     },
     created(){
@@ -22,6 +23,7 @@
             axios.get(store.api).then((reponse) => {
                     store.cards = reponse.data ;
             })
+            store.loaded = true;
         }
     }
   }

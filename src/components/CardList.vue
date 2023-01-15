@@ -17,7 +17,7 @@
 
 <template lang="">
     <div class="bg_orange pt-3 px-5">
-        <div class="container-fluid d-flex justify-content-between flex-wrap p-4 bg-white cardList_container ">
+        <div v-if="store.loaded" class="container-fluid d-flex justify-content-between flex-wrap p-4 bg-white cardList_container ">
             <Card v-for="(card, index) in store.cards.data"  :card="card" :key="index"/>
         </div>
     </div>
